@@ -2,9 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
      <item
-        android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        android:showAsAction="never" />
+        android:id="@+id/tabCuadrado"
+        android:title="@string/cuadrado"
+        android:showAsAction="always" />
 
-    
+    <item
+        android:id="@+id/tabCirculo"
+        android:title="@string/circulo"
+        android:showAsAction="always" />
+
+
 </menu>
