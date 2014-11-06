@@ -20,22 +20,18 @@ public class MainActivity extends Activity {
         actionBar.setDisplayShowTitleEnabled(false);
 
         ActionBar.Tab tabCuadrado = actionBar.newTab().setText("Cuadrado");
-        //ActionBar.Tab tabCirculo = actionBar.newTab().setText("Circulo");
+        ActionBar.Tab tabCirculo = actionBar.newTab().setText("Circulo");
 
         Fragment fragTabcuadrado = new CuadradoFragment();
-        //Fragment fragTabCirculo = new CirculoFragment();
+        Fragment fragTabCirculo = new CirculoFragment();
 
         tabCuadrado.setTabListener(new MiTabListener(fragTabcuadrado));
-        //tabCirculo.setTabListener(new MiTabListener(fragTabCirculo));
+        tabCirculo.setTabListener(new MiTabListener(fragTabCirculo));
 
         actionBar.addTab(tabCuadrado);
-        //actionBar.addTab(tabCirculo);
-
-
-
+        actionBar.addTab(tabCirculo);
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -49,8 +45,6 @@ public class MainActivity extends Activity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        Bundle b = new Bundle();
-
 
         return super.onOptionsItemSelected(item);
     }
