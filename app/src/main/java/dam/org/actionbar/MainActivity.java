@@ -15,19 +15,26 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Creo un objeto ActionBar
         ActionBar actionBar = getActionBar();
+        //Le digo a mi action bar que el modo de navegación sea por pestañas
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        //Oculto el título del action bar
         actionBar.setDisplayShowTitleEnabled(false);
 
+        //Creo dos pestañas y les pongo título.
         ActionBar.Tab tabCuadrado = actionBar.newTab().setText("Cuadrado");
         ActionBar.Tab tabCirculo = actionBar.newTab().setText("Circulo");
 
+        //Creo dos objetos Frament, uno para cada pestaña.
         Fragment fragTabcuadrado = new CuadradoFragment();
         Fragment fragTabCirculo = new CirculoFragment();
 
+        //Creo los listeners para las pestañas del action bar
         tabCuadrado.setTabListener(new MiTabListener(fragTabcuadrado));
         tabCirculo.setTabListener(new MiTabListener(fragTabCirculo));
 
+        //Añado las dos pestañas al action bar
         actionBar.addTab(tabCuadrado);
         actionBar.addTab(tabCirculo);
 

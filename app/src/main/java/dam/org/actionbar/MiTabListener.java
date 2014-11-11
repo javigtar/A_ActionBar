@@ -4,9 +4,6 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
 
-/**
- * Created by alumno on 06/11/2014.
- */
 public class MiTabListener implements ActionBar.TabListener {
 
     private Fragment fragment;
@@ -14,7 +11,6 @@ public class MiTabListener implements ActionBar.TabListener {
     public MiTabListener(Fragment frag){
         this.fragment = frag;
     }
-
 
     @Override
     public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {

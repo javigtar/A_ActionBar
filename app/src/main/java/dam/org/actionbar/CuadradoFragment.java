@@ -1,9 +1,5 @@
 package dam.org.actionbar;
 
-/**
- * Created by alumno on 06/11/2014.
- */
-
 import android.app.Fragment;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -36,11 +32,13 @@ public class CuadradoFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        LinearLayout relativeLayout = (LinearLayout) view.findViewById(R.id.cuadradoLayout);
-        relativeLayout.addView(new Cuadrado(getActivity()));
-
+        //Creo un objeto LinearLayout y le asigno el layout que tengo en su XML
+        LinearLayout layout = (LinearLayout) view.findViewById(R.id.cuadradoLayout);
+        //Añado al layout una vista que será un objeto Cuadrado que dibuja un cuadrado.
+        layout.addView(new Cuadrado(getActivity()));
     }
 
+    //Clase que dibuja un cuadrado
     private class Cuadrado extends View{
 
         public Cuadrado(Context context) {
